@@ -2,7 +2,7 @@
 import NavBar from '../components/NavBar';
 
 // Import decorative and UI components
-import ExtraFletters from '../components/extraFletters';
+import ExtraFletters from '../components/ExtraFletters';
 import Title from '../components/Title';
 import Scroll from '../components/Scroll';
 import Paragraph from '../components/Paragraph';
