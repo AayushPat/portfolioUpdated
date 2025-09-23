@@ -44,13 +44,6 @@ body {
 }
 
 @font-face {
-  font-family: 'munday';
-  src: url('/Themundayfreeversion-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'vibes';
   src: url('/GreatVibes-Regular.ttf') format('truetype');
   font-weight: normal;
