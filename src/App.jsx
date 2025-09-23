@@ -7,7 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import ScrollToTop from './components/ScrollToTop';
 import P1 from './pages/P1';
-import P2 from './pages/p2';
+import P2 from './pages/P2';
 import P3 from './pages/P3';
 
 /**
