@@ -9,8 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 import P1 from './pages/P1';
 import P2 from './pages/P2';
 import P3 from './pages/P3';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 /**
  * Main App Component
  * 
@@ -51,6 +50,7 @@ export default function App() {
         <Route path="/p2" element={<P2 />} />
         <Route path="/p3" element={<P3 />} />
       </Routes>
+      <SpeedInsights />
     </>
   );
 }
