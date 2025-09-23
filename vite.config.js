@@ -9,6 +9,6 @@ export default defineConfig({
     react()
   ],
   build: {
-    chunkSizeWarningLimit: 1000, // in KB, e.g. 1000 = 1 MB
+    chunkSizeWarningLimit: 1600, // in KB, e.g. 1000 = 1 MB
   },
 })
