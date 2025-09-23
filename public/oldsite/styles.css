@@ -1,0 +1,428 @@
+@font-face {
+    font-family: 'Impact';
+    src: url('fonts/Impact.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  .custom-cursor.hover {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .custom-cursor.click {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #2e2e2e;
+    font-family: 'Fira Code', monospace;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brown-box {
+    position: absolute;
+    top: 27%;
+    left: 24%;
+    width: 57vw;
+    min-width: 200px; 
+    height: 54%;
+    background-color: #474a80;
+    z-index: 2;
+    transition: transform 1s ease-in-out;
+    overflow: auto;
+}
+
+.title {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    font-size: 10.8vw;
+    font-family: 'Impact', sans-serif; /* Use Impact for the title */
+    font-weight: 500;
+    color: #000000;
+}
+
+.p1 {
+    position: absolute;
+    top: -12.228vw;
+    left: 6.5vw;
+    transform: scale(1.1, 1.2); 
+}
+
+.p2 {
+    position: absolute;
+    top: 0.561vh;
+    left: 0vw;
+    transform: scale(1.1, 1.2);
+}
+
+.mask {
+    position: absolute;
+    top: 43%;
+    left: -1.323vw;
+    width: 1.3vw;
+    height: 50%;
+    background-color: #e3e1c0;
+    z-index: 3;
+}
+
+.p3 {
+    position: absolute; /* Also changed formatting so p3/4 aren't used right now, but I'm gonna leave these just in case */
+    top: 23%;
+    left: 71%;
+    transform: scale(1, 1);
+}
+
+.p4 {
+    position: absolute;
+    top: 45%;
+    left: 36%;
+    transform: scale(1, 1);
+}
+
+.p5 {
+    position: absolute;
+    top: 44.3vh;
+    left: 1.8vw;
+}
+.p6{ 
+    font-size: 1rem;}
+
+.brown-box.exit {
+    transform: translateX(89%) translateY(-29%);
+}
+.brown-box.enter {
+    transform: translateX(0%) translateY(-0%);
+}
+
+.gray-box {
+    position: absolute;
+    top: 14%;
+    left: 49%;
+    width: 34vw;
+    height: 70vh;
+    background: radial-gradient(ellipse,#c6d7e5, #81717f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    transition: transform 1s ease-in-out;
+    overflow: hidden;
+    max-width: 450px;
+    min-height: 42vw;
+}
+@media screen and (max-aspect-ratio: 1/1) {
+    .gray-box.exit {
+        transform: translateY(112%) translateX(-100%);
+    }
+  }
+@media screen and (min-aspect-ratio: 1/1) {
+    .gray-box.exit {
+        transform: translateY(93%) translateX(-100%);
+    }
+  }
+
+
+.gray-box.enter {
+    transform: translateY(0%) translateX(0%);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.7vw;
+    margin-top: -2.116vw;
+    margin-bottom: 1.323vw;
+    padding: 2.646vw;
+}
+
+.headshot {
+    width: 35vw;
+    height: 70vh;
+    min-width: 390px;
+    border: none;
+    position: sticky;
+    margin-top: -2vh;
+}
+
+.button {
+    font-family: 'Fira Code', monospace; 
+    font-weight:900;
+    font-size: 0.89vw;
+    letter-spacing: 0.2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #320047;
+    border: 3px solid;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.3s, background-color 0.3s;
+    margin-top: 1.984vw;
+}
+
+.button:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+.button:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+@media (max-width: 768px) {
+    .brown-box {
+        transform: none !important; /* Disable transform */
+        transition: none !important; /* Disable transition */
+        position: absolute; /* Reset positioning */
+        top: 100%;
+    }
+
+    .gray-box {
+        transform: none !important; /* Disable transform */
+        transition: none !important; /* Disable transition */
+        position:absolute;
+        top: 93%;
+        left: 25%;
+
+    }
+    .cream-box {
+        scale: 1.2;
+        left: 200px;
+        top: 200%;
+        }
+
+    .button {
+        padding: 0.25em 0.75em;
+    }
+}
+
+.cream-box {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background-color: #e3e1c0;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #e3e1c0;
+}
+
+.cream-box::-webkit-scrollbar {
+     width: 3vh; /* Width of the scrollbar */
+   }
+  
+  .cream-box::-webkit-scrollbar-track {
+    background-color: transparent; /* Track color */
+  }
+  
+ 
+  
+
+
+.content {
+    width: 80%;
+    max-width: 800px;
+    color: #000;
+    text-align: left;
+    font-family: 'Fira Code', monospace; /* Code editor-like font for text content */
+    margin: auto;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-top: 75px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-right: 1px;;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 3.307vw;
+    margin-bottom: 3.307vw;
+}
+.list, .website, .soon{
+    width: 13vw;
+    height: 5.5hw;
+}
+
+.button-img {
+    border-radius: 12%;
+    width: 12vw; 
+    height: auto;
+    display: block;
+    margin-top: -7%;
+    margin-right: 5%;
+    transition: transform 0.3s ease;
+    filter: grayscale(60%);
+    
+}
+
+.button-img:hover {
+    transform: scale(1.09);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 20; /* Make sure the modal appears above everything else */
+    width: 46.296vw;
+    height: 400px;
+    background-color: rgb(167, 148, 117);
+    box-shadow: 0 10px 50px rgb(0, 0, 0);
+    
+    /* Center the modal */
+    top: 30%;
+    left: 26.852vw;
+}
+
+
+.modal-content {
+    position: relative;
+    padding: 3%;
+    text-align: left;
+    cursor: grab; /* Indicate that the box is draggable */
+
+}
+.modal-content p {
+    font-size: calc(0.8vw + 0.8vh);  
+    line-height: 1.2; 
+}
+
+.modal-content a {
+    text-decoration: none;
+    color: #000000; /* Initial text color */
+
+    background:
+      linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+.modal-content a:hover {
+    background-size: 0 3px, 100% 3px;
+  }
+.close:hover,
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 24px;
+}
+
+#contact ul {
+    list-style-type: none; 
+    padding-left: 12%;
+    padding-right: 12%;
+    display: flex; 
+    justify-content: flex-start; /* Align items to the left */
+    flex-wrap: wrap; /* Allow wrapping to the next row if needed */
+    margin-top: 25px; /* Add space above the list */
+}
+
+
+#contact li {
+    display: flex;
+    justify-content: center;
+    list-style: none; /* removes bullet points */
+    float: left; /* Fallback for older browsers */
+    display: block; /* Ensure list items behave as blocks */
+    text-align: center; /* Center text within each list item */
+    padding: 65px; /* Adjust padding as needed */
+    padding-top: 10px; /* Adjust top padding */
+    font-size: 20px; /* Set font size */
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+#contact p{
+    padding-right: 40px;
+    padding-left: 30x;
+}
+
+#contact a {
+    box-shadow: inset 0 0 0 0 #54b3d6; /* Initial state: no background */
+    color: #54b3d6; /* Initial text color */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out, transform .3s ease; /* Added transform for active state */
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+#contact a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6; /* Background slides in from the left */
+    color: white; /* Text color changes on hover */
+}
+
+#contact a:active {
+    transform: scale(0.7); /* Slightly shrink when clicked */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #contact ul {
+        padding-left: 5%; /* Reduce padding on smaller screens */
+        justify-content: center; /* Center links on smaller screens */
+    }
+
+    #contact li {
+        padding: 20px; /* Reduce padding on smaller screens */
+        font-size: 16px; /* Reduce font size on smaller screens */
+    }
+}
+  
+  #contact h2 {
+    font-size: 35px; 
+    color: #2c3e50; 
+    margin-bottom: 20px; 
+    text-align: center;
+  }
+  
+  #contact p {
+    font-size: 15px; 
+    color: #34495e;
+    text-align: center;
+    width: 49.603vw;
+    margin-left: 6vh;
+    margin-right: 3vw ;
+  }
+  

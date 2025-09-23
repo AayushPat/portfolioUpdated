@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+
+#root{
+    margin:0;
+    height: auto;
+}
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 1px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    magenta,
+    red,
+    yellow,
+    limegreen,
+    turquoise,
+    blue,
+    magenta,
+    transparent);
+    border-radius: 10px;
+}
+
+body {
+  background-color: #A0A0A0;
+}
+
+
+
+@font-face {
+  font-family: 'cr';
+  src: url('/CROWD PERSONAL USE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'munday';
+  src: url('/Themundayfreeversion-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'vibes';
+  src: url('/GreatVibes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fr';
+  src: url('/FRWarrior-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fed';
+  src: url('/Flying Peace PERSONAL USE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'street';
+  src: url('/DOCALLISME ON STREET.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Poppins-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'quick';
+    src: url('/Course.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+  @font-face {
+    font-family: 'compressa';
+    src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @layer base {
+    .font-outline-2 {
+      -webkit-text-stroke: 1px rgb(157, 210, 240);
+    }
+  }
+
+  @layer base {
+    .font-outline-3 {
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
+    }
+  }
+
+
+
