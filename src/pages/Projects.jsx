@@ -2,7 +2,7 @@ import { Carousel } from 'primereact/carousel';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import Ballpit from '../components/ballpit';
+import Ballpit from '../components/Ballpit';
 import 'primereact/resources/themes/lara-light-blue/theme.css'; // or another theme
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
