@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Threads from '../components/Threads';
+import DaylistEmbed from '../components/DaylistEmbed';
 
 export default function About() {
   return (
@@ -62,11 +63,7 @@ export default function About() {
            src="https://open.spotify.com/embed/playlist/37i9dQZEVXcPDEfE04r2wA?utm_source=generator"
            frameBorder="0" allowfullscreen=""
              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe
-            className="w-27 h-40 sm:w-[20vw] sm:h-[70vh] lg:w-[22vw] lg:h-[45vh] rounded-lg"
-            src="https://open.spotify.com/embed/playlist/14qWAwDjnmE4cggtzpI3Rq?utm_source=generator"
-             frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
-             fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <DaylistEmbed />
         </div>
       </div>
       
