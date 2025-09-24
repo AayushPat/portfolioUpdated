@@ -59,17 +59,17 @@ export default function About() {
 
         <div className="flex flex-wrap sm:gap-3 lg:gap-12">
           <iframe  className="w-27 h-40 sm:w-[20vw] sm:h-[50vh] lg:w-[22vw] lg:h-[45vh] rounded-lg"
-           src="https://open.spotify.com/embed/playlist/37i9dQZF1FbDexkf8Tlz33?utm_source=generator&theme=0"
+           src="https://open.spotify.com/embed/playlist/37i9dQZEVXcPDEfE04r2wA?utm_source=generator"
            frameBorder="0" allowfullscreen=""
              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           <iframe
             className="w-27 h-40 sm:w-[20vw] sm:h-[70vh] lg:w-[22vw] lg:h-[45vh] rounded-lg"
-            src="https://open.spotify.com/embed/playlist/37i9dQZEVXcPDEfE04r2wA?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/14qWAwDjnmE4cggtzpI3Rq?utm_source=generator"
              frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
              fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
-         
+      
           {/* primary text*/}
 
         <div className='text-[0.9rem] indent-15 lg:indent-30 md:indent-22 max-w-[70vw] sm:max-w-[55vw] md:max-w-[45vw] md:mt-[18%] md:ml-110 md:text-[1.1rem] sm:ml-80 lg:max-w-[50vw] lg:left-[25vw] ml-40 lg:text-2xl lg:mr-4 top-32 lg:top-25 absolute font-[poppins] z-10'>
