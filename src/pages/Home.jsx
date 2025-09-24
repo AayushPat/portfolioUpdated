@@ -134,7 +134,7 @@ export default function Home(){
       <div className="relative min-h-[100vh] bg-black w-full">
         {/* Animated wave background effect */}
         <Waves
-          lineColor="#814DB4"
+          lineColor="#3C3CBD"
           backgroundColor="#A0A0A0"
           waveSpeedX={0.02}
           waveSpeedY={0.02}
@@ -167,7 +167,7 @@ export default function Home(){
             </Link>
           </div>
           {/* Decorative arrow image with responsive sizing */}
-          <img src="/AH.png" alt="arrow" className="xl:w-[450px] xl:h-[900px] lg:w-[18vw] lg:h-[70vh] lg:bottom-0  lg:top-15 lg:ml-[75%] lg:rotate-365 w-0 md:w-0 bottom-10 rotate-363 ml-[70vw] opacity-25 brightness-200 contrast-200"  style={{ position: 'relative', zIndex: 50 }}/>
+          <img src="/AH.png" alt="arrow" className="xl:w-[450px] xl:h-[900px] lg:w-[18vw] lg:h-[70vh] lg:bottom-0  lg:top-5 lg:ml-[75%] lg:rotate-365 w-0 md:w-0 bottom-10 rotate-363 ml-[70vw] opacity-25 brightness-200 contrast-200"  style={{ position: 'relative', zIndex: 50 }}/>
           
           {/* Paragraph component for additional content */}
           <Paragraph />

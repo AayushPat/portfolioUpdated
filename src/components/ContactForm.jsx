@@ -99,7 +99,7 @@ export default function ContactForm() {
         
         {/* Name input field */}
         <input
-          className="w-[30vw] mb-4 p-2 border border-gray-100 rounded  shadow-purple-300 shadow-xl text-white"
+          className="w-[30vw] mb-4 p-2 border border-gray-100 rounded  shadow-blue-300 shadow-xl text-white"
           type="text"
           id="name"
           name="name"
@@ -108,7 +108,7 @@ export default function ContactForm() {
         
         {/* Email input field */}
         <input
-          className="w-full mb-4 p-2 border border-gray-100 rounded  shadow-purple-300 shadow-xl text-white"
+          className="w-full mb-4 p-2 border border-gray-100 rounded  shadow-blue-300 shadow-xl text-white"
           type="email"
           id="email"
           name="email"
@@ -125,7 +125,7 @@ export default function ContactForm() {
         
         {/* Submit button */}
         <button
-          className="bg-purple-600 text-white md:text-5xl mt-20 font-[Poppins] md:px-8 md:py-8 rounded hover:bg-purple-700 transition"
+          className="bg-blue-600 text-white md:text-5xl mt-20 font-[Poppins] md:px-8 md:py-8 rounded hover:bg-blue-700 transition"
           type="submit"
         >
           Send
@@ -134,7 +134,7 @@ export default function ContactForm() {
         
         {/* Message textarea with responsive positioning */}
         <textarea
-          className="absolute mt-70 sm:mt-30 w-30 sm:w-50 ml-10 lg:left-60 lg:mt-0 lg:top-125 lg:w-90 lg:h-30 lg:mb-50 md:top-145 md:left-10 md:w-70 border border-gray-300 rounded  shadow-purple-300 shadow-xl  text-white"
+          className="absolute mt-70 sm:mt-30 w-30 sm:w-50 ml-10 lg:left-60 lg:mt-0 lg:top-125 lg:w-90 lg:h-30 lg:mb-50 md:top-145 md:left-10 md:w-70 border border-gray-300 rounded  shadow-blue-300 shadow-xl  text-white"
           id="message"
           name="message"
           rows="4"
