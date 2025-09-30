@@ -10,6 +10,8 @@ import P1 from './pages/P1';
 import P2 from './pages/P2';
 import P3 from './pages/P3';
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from '@vercel/analytics/react'
+
 /**
  * Main App Component
  * 
