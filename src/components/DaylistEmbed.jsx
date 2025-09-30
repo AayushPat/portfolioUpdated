@@ -18,9 +18,8 @@ export default function DaylistEmbed() {
   return (
     <iframe
       key={nonce} 
-      className=" className=w-27 h-40 sm:w-[20vw] sm:h-[50vh] lg:w-[22vw] lg:h-[45vh] rounded-lg"
+      className="w-27 h-40 sm:w-[20vw] sm:h-[50vh] lg:w-[22vw] lg:h-[45vh] rounded-lg"
       src={`https://open.spotify.com/embed/playlist/${DAYLIST_ID}?utm_source=generator&theme=0&_=${nonce}`}
-      frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     />
