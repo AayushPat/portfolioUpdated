@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 
 export default function P2(){
     return(
-      <div className="absolute bg-black w-full h-[100vh] lg:h-[160vh]">
+      <main id="main-content" className="absolute bg-black w-full h-[100vh] lg:h-[160vh]">
         <NavBar textColor="text-green-200"/>
         <h1 className="text-white text-4xl lg:text-8xl font-[poppins]  text-center lg:text-left mt-10 lg:max-w-[20vw] lg:ml-15">
                 First/ Original Portfolio Website
@@ -36,6 +36,6 @@ export default function P2(){
             className="relative h-0 lg:w-full lg:h-[100vh] bottom-40"
             title="Old Portfolio"
             ></iframe>
-      </div>  
+      </main>  
     )
 }

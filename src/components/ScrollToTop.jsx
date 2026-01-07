@@ -18,9 +18,9 @@ export default function ScrollToTop() {
 
   // useEffect hook: Runs whenever the pathname changes
   useEffect(() => {
-    // Smoothly scroll to the top of the page
+    // Instantly scroll to the top of the page (instant is better for route changes)
     // This ensures users don't stay at the bottom of the previous page
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [pathname]); // Dependency array: effect runs when pathname changes
 
   // Return null since this component doesn't render anything

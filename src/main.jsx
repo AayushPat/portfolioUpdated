@@ -13,6 +13,9 @@ import './index.css'
 // Import the main App component
 import App from './App'
 
+// Import ErrorBoundary for error handling
+import ErrorBoundary from './components/ErrorBoundary'
+
 /**
  * Application Entry Point
  * 
@@ -22,10 +25,13 @@ import App from './App'
 createRoot(document.getElementById('root')).render(
   // React.StrictMode: Enables additional development checks and warnings
   <React.StrictMode>
-    {/* BrowserRouter: Provides routing context for the entire application */}
-    <BrowserRouter>
-      {/* Main App component: The root component containing all routes and logic */}
-      <App />
-    </BrowserRouter>
+    {/* ErrorBoundary: Catches and handles errors gracefully */}
+    <ErrorBoundary>
+      {/* BrowserRouter: Provides routing context for the entire application */}
+      <BrowserRouter>
+        {/* Main App component: The root component containing all routes and logic */}
+        <App />
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>,
 )

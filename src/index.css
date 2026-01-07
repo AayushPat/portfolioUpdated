@@ -7,6 +7,33 @@
 }
 
 
+/* Global rainbow scrollbar styling for all elements */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    magenta,
+    red,
+    yellow,
+    limegreen,
+    turquoise,
+    blue,
+    magenta,
+    transparent);
+  border-radius: 10px;
+}
+
+/* Body-specific scrollbar (for backwards compatibility) */
 body::-webkit-scrollbar {
   width: 8px;
   height: 1px;
@@ -15,6 +42,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
 }
+
 body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(
     90deg,
@@ -27,7 +55,7 @@ body::-webkit-scrollbar-thumb {
     blue,
     magenta,
     transparent);
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 body {
@@ -111,6 +139,30 @@ body {
     .font-outline-3 {
       -webkit-text-stroke: 1px rgb(255, 255, 255);
     }
+  }
+
+  /* Screen reader only class for accessibility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 
 

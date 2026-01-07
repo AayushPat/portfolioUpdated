@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const DAYLIST_ID = "37i9dQZF1FbGH0nYRrFkQt"; // paste your Daylist ID here
+const DAYLIST_ID = "37i9dQZF1FbCZVYWLrZZeo"; // Your Daylist playlist ID
 
 export default function DaylistEmbed() {
   const [nonce, setNonce] = useState(Date.now()); // cache-buster

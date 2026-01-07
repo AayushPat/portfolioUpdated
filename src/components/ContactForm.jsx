@@ -25,6 +25,9 @@ export default function ContactForm() {
   
   // State to track submission success/failure
   const [isSuccess, setIsSuccess] = React.useState(null);
+  
+  // State to track loading state
+  const [isLoading, setIsLoading] = React.useState(false);
 
   /**
    * Handle form submission
@@ -34,39 +37,59 @@ export default function ContactForm() {
     // Prevent default form submission behavior
     event.preventDefault();
     
+    // Prevent double submission
+    if (isLoading) return;
+    
     // Show sending message to user
     setResult("Sending....");
+    setIsLoading(true);
     
-    // Create FormData object from form inputs
-    const formData = new FormData(event.target);
+    try {
+      // Create FormData object from form inputs
+      const formData = new FormData(event.target);
 
-    // Add Web3Forms access key for API authentication
-    formData.append("access_key", "75f5b362-6dbb-48b7-ba32-9b36ec39df5a");
+      // Add Web3Forms access key for API authentication
+      // Use environment variable if available, fallback to hardcoded value for backwards compatibility
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "75f5b362-6dbb-48b7-ba32-9b36ec39df5a";
+      formData.append("access_key", accessKey);
 
-    // Submit form data to Web3Forms API
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+      // Submit form data to Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-    // Parse response JSON
-    const data = await response.json();
+      // Check if response is ok
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-    // Handle successful submission
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset(); // Clear form fields
-      setIsSuccess(true);     
-      // Show success notification
-      Swal.fire("Success!", "Your message was sent!", "success");
- 
-    } else {
-      // Handle submission error
-      console.log("Error", data);
-      setResult(data.message);
+      // Parse response JSON
+      const data = await response.json();
+
+      // Handle successful submission
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset(); // Clear form fields
+        setIsSuccess(true);     
+        // Show success notification
+        Swal.fire("Success!", "Your message was sent!", "success");
+      } else {
+        // Handle submission error
+        console.error("Error", data);
+        setResult(data.message || "An error occurred");
+        setIsSuccess(false);
+        // Show error notification
+        Swal.fire("Oops!", data.message || "Something went wrong.", "error");
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Form submission error:", error);
+      setResult("Network error. Please try again.");
       setIsSuccess(false);
-      // Show error notification
-      Swal.fire("Oops!", "Something went wrong.", "error");
+      Swal.fire("Oops!", "Network error. Please check your connection and try again.", "error");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -99,20 +122,24 @@ export default function ContactForm() {
         
         {/* Name input field */}
         <input
-          className="w-[30vw] mb-4 p-2 border border-gray-100 rounded  shadow-blue-300 shadow-xl text-white"
+          className="w-[30vw] mb-4 p-2 border border-gray-100 rounded shadow-blue-300 shadow-xl text-white bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
           type="text"
           id="name"
           name="name"
           required
+          aria-required="true"
+          autoComplete="name"
         />
         
         {/* Email input field */}
         <input
-          className="w-full mb-4 p-2 border border-gray-100 rounded  shadow-blue-300 shadow-xl text-white"
+          className="w-full mb-4 p-2 border border-gray-100 rounded shadow-blue-300 shadow-xl text-white bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
           type="email"
           id="email"
           name="email"
           required
+          aria-required="true"
+          autoComplete="email"
         />
   
         {/* Message field label */}
@@ -125,20 +152,24 @@ export default function ContactForm() {
         
         {/* Submit button */}
         <button
-          className="bg-blue-600 text-white md:text-5xl mt-20 font-[Poppins] md:px-8 md:py-8 rounded hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white md:text-5xl mt-20 font-[Poppins] md:px-8 md:py-8 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black transition disabled:opacity-50 disabled:cursor-not-allowed"
           type="submit"
+          aria-label="Submit contact form"
+          disabled={result === "Sending...."}
         >
-          Send
+          {result === "Sending...." ? "Sending..." : "Send"}
         </button>
         </div>
         
         {/* Message textarea with responsive positioning */}
         <textarea
-          className="absolute mt-70 sm:mt-30 w-30 sm:w-50 ml-10 lg:left-60 lg:mt-0 lg:top-125 lg:w-90 lg:h-30 lg:mb-50 md:top-145 md:left-10 md:w-70 border border-gray-300 rounded  shadow-blue-300 shadow-xl  text-white"
+          className="absolute mt-70 sm:mt-30 w-30 sm:w-50 ml-10 lg:left-60 lg:mt-0 lg:top-125 lg:w-90 lg:h-30 lg:mb-50 md:top-145 md:left-10 md:w-70 border border-gray-300 rounded shadow-blue-300 shadow-xl text-white bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all resize-none"
           id="message"
           name="message"
           rows="4"
           required
+          aria-required="true"
+          aria-label="Message"
         ></textarea>
       </form>
     );

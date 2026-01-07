@@ -1,11 +1,10 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Threads from '../components/Threads';
-import DaylistEmbed from '../components/DaylistEmbed';
 
 export default function About() {
   return (
-    <div className="w-full overflow-hidden bg-[#A0A0A0] max-h-[100vh] lg:max-h-[150vh]">
+    <main id="main-content" className="w-full overflow-hidden bg-[#A0A0A0] max-h-[100vh] lg:max-h-[150vh]">
         {/* adjusted navbar to so i can change its color for every page remember to use for other pages*/}
         <NavBar textColor='text-white' className='relative z-10'/>
       <div className='absolute bottom-[65vh] sm:bottom-[47vh] lg:bottom-30 sm:h-[100vh] lg:h-[145vh] h-[60vh] w-full z-0 pointer-events-none'>
@@ -59,11 +58,12 @@ export default function About() {
         <h1 className="lg:text-5xl font-mono mb-3 lg:mb-6">My Top Working Music</h1>
 
         <div className="flex flex-wrap sm:gap-3 lg:gap-12">
-          <iframe  className="w-27 h-40 sm:w-[20vw] sm:h-[50vh] lg:w-[22vw] lg:h-[45vh] rounded-lg"
-           src="https://open.spotify.com/embed/playlist/37i9dQZEVXcPDEfE04r2wA?utm_source=generator"
+          <iframe  className="w-full h-96 sm:w-[40vw] sm:h-[60vh] lg:w-[45vw] lg:h-[55vh] rounded-lg"
+           src="https://open.spotify.com/embed/playlist/37i9dQZF1FbCZVYWLrZZeo?utm_source=generator"
            frameBorder="0" allowfullscreen=""
-             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <DaylistEmbed />
+             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+             loading="lazy"
+             style={{ borderRadius: '12px' }}></iframe>
         </div>
       </div>
       
@@ -88,6 +88,6 @@ export default function About() {
         </div>
         </div>
       </div>
-      </div>
+      </main>
   );
 }
