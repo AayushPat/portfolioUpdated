@@ -19,11 +19,29 @@ export default defineConfig({
           'gsap-vendor': ['gsap', '@gsap/react'],
           'ui-vendor': ['primereact', 'sweetalert2']
         }
-      }
+      },
+      external: []
+    },
+    commonjsOptions: {
+      include: [/node_modules/],
+      transformMixedEsModules: true
     }
   },
   // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'chart.js/auto']
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom', 
+      'chart.js/auto', 
+      'quill',
+      'primereact/carousel'
+    ],
+    esbuildOptions: {
+      resolveExtensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs']
+    }
+  },
+  resolve: {
+    dedupe: ['react', 'react-dom']
   }
 })
