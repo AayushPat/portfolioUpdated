@@ -17,19 +17,20 @@ const ScrollAni = (container, multiplier) => {
     const mm = ScrollTrigger.matchMedia({
     
       "(max-width: 640px)": () => {
+        // Reduced animation complexity for mobile performance
         gsap.fromTo(letter,
           { y: 0, rotate: 0 },
           {
-            y: yValue * 0.6,         
-            rotate: degrees * 0.6,
-            duration: 1.5,
-            ease: 'expoScale(0.5,7, none)',
+            y: yValue * 0.4,         
+            rotate: degrees * 0.4,
+            duration: 1.2,
+            ease: 'power2.out',
             scrollTrigger: {
               trigger: '#scroll-trigger-line',
-              start: '100px 40%',   // mobile: when #scroll-trigger-line hits 80% down the viewport
-              end: 'top top', // mobile: till its bottom reaches viewport bottom
-              scrub: 2,
-             // markers: true,
+              start: '100px 40%',
+              end: 'top top',
+              scrub: 1.5,
+              // markers: true,
             }
           }
         );

@@ -16,19 +16,20 @@ const ScrollAniElement = (element, multiplier = 2) => {
 
   const mm = ScrollTrigger.matchMedia({
     "(max-width: 640px)": () => {
+      // Simplified animation for mobile performance
       gsap.fromTo(element,
         { y: 0, rotate: 0, opacity: 1 },
         {
-          y: yValue * 0.6,
-          rotate: degrees * 0.6,
+          y: yValue * 0.4,
+          rotate: degrees * 0.4,
           opacity: 0,
-          duration: 0.3,
-          ease: 'expoScale(0.5,7, none)',
+          duration: 0.25,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: '#scroll-trigger-line',
             start: '100px 40%',
             end: 'top top',
-            scrub: 2,
+            scrub: 1.5,
             invalidateOnRefresh: true,
           }
         }

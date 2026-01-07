@@ -6,6 +6,26 @@
     height: auto;
 }
 
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  * {
+    /* Reduce will-change usage on mobile - only apply when needed */
+    will-change: auto;
+  }
+  
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
 
 /* Global rainbow scrollbar styling for all elements */
 *::-webkit-scrollbar {

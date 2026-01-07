@@ -121,8 +121,8 @@ export default function Home(){
         {/* Main title component */}
         <Title />
         
-        {/* Decorative floating letters */}
-        <ExtraFletters />
+        {/* Decorative floating letters - disabled on mobile for performance */}
+        {width >= 768 && <ExtraFletters />}
         
         {/* Scroll indicator arrow with responsive positioning */}
         <img src="/down.png" alt=" three down arrows" className=" w-13 ml-[75vw] mt-80 md:w-[10vw] sm:ml-[84vw] sm:mt-[25vh] xl:w-45 h-auto lg:w-40 lg:ml-[83%] lg:mt-40" ref={arrowRef}/>
@@ -247,19 +247,35 @@ export default function Home(){
       
       {/* Content Section: Black background with animated waves */}
       <div className="relative min-h-[100vh] bg-black w-full z-30">
-        {/* Animated wave background effect */}
-        <Waves
-          lineColor="#3C3CBD"
-          backgroundColor="#A0A0A0"
-          waveSpeedX={0.02}
-          waveSpeedY={0.02}
-          waveAmpX={40}
-          waveAmpY={20}
-          friction={0.8}
-          tension={0.01}
-          maxCursorMove={500}
-          yGap={36}
+        {/* Animated wave background effect - optimized for mobile */}
+        {width >= 768 ? (
+          <Waves
+            lineColor="#3C3CBD"
+            backgroundColor="#A0A0A0"
+            waveSpeedX={0.02}
+            waveSpeedY={0.02}
+            waveAmpX={40}
+            waveAmpY={20}
+            friction={0.8}
+            tension={0.01}
+            maxCursorMove={500}
+            yGap={36}
           />
+        ) : (
+          <Waves
+            lineColor="#3C3CBD"
+            backgroundColor="#A0A0A0"
+            waveSpeedX={0.015}
+            waveSpeedY={0.015}
+            waveAmpX={20}
+            waveAmpY={10}
+            friction={0.9}
+            tension={0.02}
+            maxCursorMove={200}
+            yGap={48}
+            xGap={15}
+          />
+        )}
           
           {/* About Me Section: Large interactive link with hover animations */}
           <div className="absolute sm:top-[15vh] md:top-[10vh] lg:top-[20vh] md:left-2 lg:left-0 lg:right-[16%] top-[6vh] w-full items-center">
@@ -292,13 +308,13 @@ export default function Home(){
         <div className="absolute inset-0 z-0 h-full">
           <Dither
             waveColor={[0.5, 0.5, 0.5]}
-            disableAnimation={false}
+            disableAnimation={width < 768}
             enableMouseInteraction={false}
             mouseRadius={0.3}
-            colorNum={4}
-            waveAmplitude={0.3}
-            waveFrequency={3}
-            waveSpeed={0.05}
+            colorNum={width < 768 ? 2 : 4}
+            waveAmplitude={width < 768 ? 0.15 : 0.3}
+            waveFrequency={width < 768 ? 2 : 3}
+            waveSpeed={width < 768 ? 0.03 : 0.05}
         />
         </div>
         <section ref={contactRef} id="contact">

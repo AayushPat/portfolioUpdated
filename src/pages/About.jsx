@@ -1,19 +1,24 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Threads from '../components/Threads';
+import { useWindowSize } from '../components/useWindowSize';
 
 export default function About() {
+  const { width } = useWindowSize();
+  
   return (
     <main id="main-content" className="w-full overflow-hidden bg-[#A0A0A0] max-h-[100vh] lg:max-h-[150vh]">
         {/* adjusted navbar to so i can change its color for every page remember to use for other pages*/}
         <NavBar textColor='text-white' className='relative z-10'/>
       <div className='absolute bottom-[65vh] sm:bottom-[47vh] lg:bottom-30 sm:h-[100vh] lg:h-[145vh] h-[60vh] w-full z-0 pointer-events-none'>
         {/* tried to kinda look like the waves from about me section of home page just another angle*/}
-        <Threads
-          amplitude={1.8}
-          distance={0.5}
-          enableMouseInteraction={false}
+        {width >= 768 && (
+          <Threads
+            amplitude={1.8}
+            distance={0.5}
+            enableMouseInteraction={false}
           />
+        )}
       </div>
       <div className='flex flex-col flex-wrap'>
       <div className='text-white'>
