@@ -8,7 +8,7 @@ export default function P4(){
         <h1 className="text-white text-4xl lg:text-8xl text-center lg:text-left font-[poppins] mt-10 lg:max-w-[45vw] lg:ml-15">
             AI File Organizer
         </h1>
-        <p className="text-center lg:text-left mt-32 lg:mt-36 mb-0 pb-0 leading-tight relative text-white font-[poppins] lg:text-lg lg:ml-180 lg:max-w-[50vw] lg:bottom-65">
+        <p className="text-center lg:text-left mt-12 lg:mt-36 mb-25 pb-0 leading-tight relative text-white font-[poppins] lg:text-lg lg:ml-180 lg:max-w-[50vw] lg:bottom-65">
         This project began as a file-sorting assistant but evolved into a practical study of local LLM deployment and optimization using Ollama.
         I gained hands-on experience hosting AI models locally, experimenting with model parameters, and optimizing token usage to reduce latency. 
         One of the core challenges was shrinking prompts as much as possible to speed up responses while preserving enough context for accurate classification.
@@ -28,7 +28,7 @@ export default function P4(){
         </div>
 
         {/* Before/After Desktop Comparison */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 justify-center items-center -mt-[30px] lg:-mt-[30px] px-4">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 justify-center items-center -mt-[20px] lg:-mt-[30px] px-4">
           <div className="text-center">
             <h2 className="text-white text-2xl lg:text-4xl font-[poppins] mb-4">Before</h2>
             <LazyImage 

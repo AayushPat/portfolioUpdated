@@ -29,7 +29,7 @@ export default function P2(){
 
             {/* Show only on small screens */}
             <p className="block lg:hidden relative text-white font-[poppins] text-lg text-center mt-[7vh] px-6">
-              Open this page in a bigger window to check it out!
+              Open this page in a laptop or desktop to see it!
             </p>
             <iframe
             src="/oldsite/index.html"
