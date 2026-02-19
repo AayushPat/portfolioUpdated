@@ -1,93 +1,41 @@
-import { Carousel } from 'primereact/carousel';
-import React from 'react';
-import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import Ballpit from '../components/Ballpit';
-import 'primereact/resources/themes/lara-light-blue/theme.css'; // or another theme
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
+import InfiniteMenu from '../components/InfiniteMenu';
 
+const items = [
+  {
+    image: '/regularinUse.jpg',
+    link: '/p4',
+    title: 'AI File Organizer',
+    description: 'Local LLM file management'
+  },
+  {
+    image: '/cave.jpg',
+    link: '/p1',
+    title: 'Grand Caverns Sim',
+    description: '3D cave simulation'
+  },
+  {
+    image: '/web.jpg',
+    link: '/p2',
+    title: 'First Website',
+    description: 'HTML & CSS static site'
+  },
+  {
+    image: '/google-calendar.jpg',
+    link: '/p3',
+    title: 'Canvas To-Do List',
+    description: 'Canvas API integration',
+    brightness: 1.6
+  }
+];
 
-export default function Projects(){
-
-    const products = [ 
-       {
-          name: 'AI File Organizer',
-          image: 'regularinUse.jpg',
-          route: '/p4'
-        },
-        {
-          name: 'Grand Caverns Sim',
-          image: 'cave.jpg',
-          route: '/p1'
-        },
-        {
-          name: ' First Website',
-          image: 'web.jpg',
-          route: '/p2'
-        },
-        {
-          name: 'Canvas To-Do List',
-          image: 'google-calendar.jpg',
-          route: '/p3'
-        }
-      ];
-
-    const responsiveOptions = [
-        {
-          breakpoint: '1024px',
-          numVisible: 3,
-          numScroll: 1
-        },
-        {
-          breakpoint: '768px',
-          numVisible: 2,
-          numScroll: 1
-        },
-        {
-          breakpoint: '560px',
-          numVisible: 1,
-          numScroll: 1
-        }
-      ];
-
-      function productTemplate(product) {
-        return (
-          <Link to={product.route} className="project-card group">
-            <div className="relative left-[5vw] h-48 w-38 lg:h-[28vh] lg:w-[14vw] lg:h-rounded-md bg-gradient-to-br from-indigo-600 to-pink-600 p-1">
-              <div className="w-full h-full rounded-md bg-black flex items-center justify-center">
-            <div className="h-50 w-40 lg:h-[30vh] lg:w-[16vw]  bg-gradient-to-tr from-indigo-600 to-pink-600 bg-clip-text mx-auto text-center py-5 px-3 text-white
-             group-hover:shadow-white group-hover:shadow-2xl">
-                <h4 className="text-xs lg:mb-1 font-[poppins]">{product.name}</h4>
-                <img src={`/${product.image}`} alt={`${product.name} project preview`} className="w-60 shadow-2 mt-10 lg:mt-12" />
-                </div>
-                </div>
-            </div>
-           </Link>
-        );
-      }
-    return(
-        <main id="main-content" className='bg-black w-full h-[100vh]'>
-            <div className="absolute inset-0 z-0">
-              <Ballpit
-                count={100}
-                gravity={0.5}
-                friction={0.99}
-                wallBounce={0.95}
-                followCursor={false}
-            />
-            </div>
-            <div className='relative z-10'>
-                <NavBar textColor='text-white' />
-                <h1 className='font-[compressa] text-white text-6xl text-center lg:text-auto lg:text-[9vw] mt-20 sm:mt-0 md:mt-[10%] sm:mb-10 mb-20 lg:mt-10 lg:mb-15'>
-                Projects 
-                </h1>
-                <div className='max-w-[80vw] mx-auto'>
-                <Carousel value={products} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate}/>
-                </div>
-            </div>
-        </main>
-    )
-         
-    }
-    
+export default function Projects() {
+  return (
+    <main id="main-content" className="bg-black w-full h-screen flex flex-col">
+      <NavBar textColor="text-white" />
+      <div className="flex-1 w-full min-h-0">
+        <InfiniteMenu items={items} />
+      </div>
+    </main>
+  );
+}

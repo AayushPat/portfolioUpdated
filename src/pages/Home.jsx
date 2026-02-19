@@ -150,7 +150,7 @@ export default function Home(){
           {/* Project Card 1: AI File Organizer */}
           <Card className>
             <Link to="/p4">
-              <h3 className='font-[quick] text-4xl pt-4 text-center mr-10 inset-0 bg-gradient-to-t from-purple-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] border-2'>
+              <h3 className='font-[quick] text-4xl flex items-center justify-center bg-gradient-to-t from-purple-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] border-2'>
               AI File Organizer</h3>
               <p className='text-center pt-6 font-[Poppins]'>
                 A practical study of local LLM deployment and optimization using Ollama. This project taught me how prompt design, 
@@ -161,7 +161,7 @@ export default function Home(){
           {/* Project Card 2: Canvas To-Do List */}
           <Card className>
             <Link to="/p3">
-              <h3 className='font-[quick] text-4xl pt-4 text-center mr-10 inset-0 bg-gradient-to-t from-red-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] border-2'>
+              <h3 className='font-[quick] text-4xl flex items-center justify-center bg-gradient-to-t from-red-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] border-2'>
               Canvas To-Do List</h3>
               <p className='text-center pt-6 font-[Poppins]'>
                 This project automates the process of syncing assignments
@@ -173,7 +173,7 @@ export default function Home(){
           </Card>  
         <Card>
         <Link to="/p2">
-          <h3 className='font-[quick] text-4xl pt-4 text-center mr-10 inset-0 bg-gradient-to-t from-green-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh]  md:h-[7vw] border-2'>
+          <h3 className='font-[quick] text-4xl flex items-center justify-center bg-gradient-to-t from-green-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh]  md:h-[7vw] border-2'>
           First Website</h3>
           <p className='text-center pt-6 font-[Poppins]'>This was my first personal website, built using only HTML and CSS.
              It’s simple but shows where I began, learning how to create and 

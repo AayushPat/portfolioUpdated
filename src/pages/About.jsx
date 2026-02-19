@@ -1,4 +1,3 @@
-import React from 'react';
 import NavBar from '../components/NavBar';
 import Threads from '../components/Threads';
 import { useWindowSize } from '../components/useWindowSize';
@@ -56,21 +55,6 @@ export default function About() {
           </span>
          </a>
 
-        {/*spotify area just to make page a lil more personal and about me might not have it show on smaller screen*/}
-        {/*will be adjusting it for smaller screens*/}
-
-        <div className="order-1 px-3 lg:px-10 relative z-10 text-white w-[40vw] sm:w-[50vw] lg:w-[55vw] lg:bottom-20">
-        <h1 className="lg:text-5xl font-mono mb-3 lg:mb-6">My Top Working Music</h1>
-
-        <div className="flex flex-wrap sm:gap-3 lg:gap-12">
-          <iframe  className="w-full h-96 sm:w-[40vw] sm:h-[60vh] lg:w-[45vw] lg:h-[55vh] rounded-lg"
-           src="https://open.spotify.com/embed/playlist/37i9dQZF1FbCZVYWLrZZeo?utm_source=generator"
-           frameBorder="0" allowfullscreen=""
-             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-             loading="lazy"
-             style={{ borderRadius: '12px' }}></iframe>
-        </div>
-      </div>
       
           {/* primary text*/}
 

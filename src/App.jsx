@@ -54,6 +54,8 @@ export default function App() {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
     // Show splash for at least 1s, and wait for all images + fonts
     const minTime = new Promise((resolve) => setTimeout(resolve, 1000));
     const assets = Promise.all([
@@ -64,7 +66,10 @@ export default function App() {
     Promise.all([minTime, assets]).then(() => {
       setIsFadingOut(true);
       // Remove overlay after fade-out animation completes
-      setTimeout(() => setIsPreloading(false), 500);
+      setTimeout(() => {
+        setIsPreloading(false);
+        document.body.style.overflow = '';
+      }, 500);
     });
   }, []);
 
