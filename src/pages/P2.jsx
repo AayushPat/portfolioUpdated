@@ -8,10 +8,10 @@ export default function P2(){
                 First/ Original Portfolio Website
          </h1>
         <p className="mt-10 text-center lg:text-left relative text-white font-[poppins] lg:text-lg lg:ml-180 lg:max-w-[50vw] lg:bottom-90">
-        This was the first personal website I ever built, created entirely with vanilla HTML and CSS.
-         It marked my introduction to web development and served as a hands-on way to explore structure, 
+        This was the first personal project, created entirely with HTML, JavaScript, and CSS.
+         It marked my introduction to web development and served as a hands on way to explore structure, 
          styling, and responsive design from the ground up. While simple in function, it laid the foundation 
-         for my growth as a developer—teaching me the importance of clean code, layout design, and
+         for my growth as a developer,teaching me the importance of clean code, layout design, and
           user experience. Looking back, it’s a great reminder of how far I’ve come.</p>
           <div className="flex justify-center">
              <a 

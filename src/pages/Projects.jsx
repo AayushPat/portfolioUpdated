@@ -13,22 +13,22 @@ export default function Projects(){
     const products = [ 
        {
           name: 'AI File Organizer',
-          image: 'regularinUse.png',
+          image: 'regularinUse.jpg',
           route: '/p4'
         },
         {
           name: 'Grand Caverns Sim',
-          image: 'cave.png',
+          image: 'cave.jpg',
           route: '/p1'
         },
         {
           name: ' First Website',
-          image: 'web.png',
+          image: 'web.jpg',
           route: '/p2'
         },
         {
           name: 'Canvas To-Do List',
-          image: 'google-calendar.png',
+          image: 'google-calendar.jpg',
           route: '/p3'
         }
       ];

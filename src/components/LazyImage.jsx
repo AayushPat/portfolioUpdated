@@ -20,10 +20,20 @@ export default function LazyImage({ src, alt, className = '', ...props }) {
   const imgRef = useRef(null);
 
   useEffect(() => {
-    // Only run in browser environment
-    if (typeof window === 'undefined' || !imgRef.current) return;
+    if (typeof window === 'undefined') return;
 
-    // Use Intersection Observer for lazy loading
+    // If the image is already in the browser cache, skip the observer entirely
+    const probe = new Image();
+    probe.src = src;
+    if (probe.complete) {
+      setIsInView(true);
+      setIsLoaded(true);
+      return;
+    }
+
+    if (!imgRef.current) return;
+
+    // Otherwise use IntersectionObserver to lazy load
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,7 +44,7 @@ export default function LazyImage({ src, alt, className = '', ...props }) {
         });
       },
       {
-        rootMargin: '50px', // Start loading 50px before image enters viewport
+        rootMargin: '200px', // Start loading 200px before image enters viewport
         threshold: 0.01
       }
     );
@@ -47,7 +57,7 @@ export default function LazyImage({ src, alt, className = '', ...props }) {
       }
       observer.disconnect();
     };
-  }, []);
+  }, [src]);
 
   const handleLoad = () => {
     setIsLoaded(true);

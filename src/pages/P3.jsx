@@ -8,11 +8,11 @@ export default function P3(){
         Canvas to Google Calendar Sync Tool
         </h1>
         <p className="text-center lg:text-left mt-10 lg:mt-0 relative text-white font-[poppins] lg:text-lg lg:ml-180 lg:max-w-[50vw] lg:bottom-65">
-        This Python-based automation tool connects the Canvas LMS with Google Calendar to help students
+        This Python-based automation tool connects the Canvas LMS with Google Calendar to help me
          stay organized by automatically syncing assignment due dates. It uses the Canvas API to fetch course 
          and assignment data, then authenticates with the Google Calendar API using a service account to 
          create events for each assignment. Built with robust error handling and logging, the script ensures
-          that only valid due dates are processed and added to the user’s primary calendar</p>
+          that only valid due dates are processed and added based on my professors style of assigning due date.</p>
           <div className="flex justify-center">
              <a 
             href="https://github.com/AayushPat/gcalander" 

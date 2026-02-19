@@ -13,7 +13,6 @@ import { Card } from '../components/CardSwap';
 import TextPressure from '../components/TextPressure';
 import ContactForm from '../components/ContactForm';
 import Dither from '../components/FunnyBG';
-import LazyImage from '../components/LazyImage';
 import QuickFacts from '../components/QuickFacts';
 
 // Import React hooks and utilities
@@ -144,7 +143,7 @@ export default function Home(){
             height={cardHeight}
             cardDistance={100}
             verticalDistance={verticalDistance}
-            delay={2700}
+            delay={1800}
             pauseOnHover={true}
           >
         
@@ -156,7 +155,7 @@ export default function Home(){
               <p className='text-center pt-6 font-[Poppins]'>
                 A practical study of local LLM deployment and optimization using Ollama. This project taught me how prompt design, 
                 token limits, and model settings directly impact performance and accuracy, and how to integrate AI reasoning safely into real file system operations.</p>
-                   <LazyImage src="/regularinUse.png" alt="AI File Organizer GUI interface with Windows 95 style design" className='w-full mt-[4vh] m-7' />
+                   <img src="/regularinUse.jpg" alt="AI File Organizer GUI interface with Windows 95 style design" className='w-full mt-[4vh] m-7' />
             </Link>
           </Card>
           {/* Project Card 2: Canvas To-Do List */}
@@ -169,7 +168,7 @@ export default function Home(){
                  from canvas to Google Calendar. It retrieves assignments
                   using the Canvas API and adds them to Google Calendar,
                    making it easier to manage deadlines and events.</p>
-                   <LazyImage src="/google-calendar.png" alt="Canvas to Google Calendar sync tool interface showing calendar integration" className='w-full mt-[4vh] m-7' />
+                   <img src="/google-calendar.jpg" alt="Canvas to Google Calendar sync tool interface showing calendar integration" className='w-full mt-[4vh] m-7' />
             </Link>
           </Card>  
         <Card>
@@ -181,7 +180,7 @@ export default function Home(){
              style everything from scratch. Revisiting it now reminds me how much
               I’ve grown, moving mostly from basic static pages to more advanced, responsive designs.
           </p>
-          <LazyImage src="/web.png" alt="Screenshot of first personal website built with HTML and CSS" className='w-full m-6' />
+          <img src="/web.jpg" alt="Screenshot of first personal website built with HTML and CSS" className='w-full m-6' />
           </Link>
         </Card>   
         <Card>
@@ -195,7 +194,7 @@ export default function Home(){
                 The final simulation shows bats flying through the space 
                 just as they do in the real cave, giving an accurate
                  look at their movement and behavior underground.</p>
-                 <LazyImage src="/cave.png" alt="3D visualization of Grand Caverns cave structure" className='w-full mb-10' />
+                 <img src="/cave.jpg" alt="3D visualization of Grand Caverns cave structure" className='w-full mb-10' />
           </Link>
         </Card>  
         </CardSwap>
