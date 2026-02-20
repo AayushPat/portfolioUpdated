@@ -125,7 +125,7 @@ export default function Home(){
         
         {/* Scroll indicator: arrow + "Scroll" text, aligned together */}
         <div className="absolute flex items-center top-80 left-[75vw] sm:top-[25vh] sm:left-[84vw] lg:top-40 lg:left-[83%]">
-          <img src="/down.png" alt="three down arrows" className="w-13 md:w-[10vw] lg:w-40 xl:w-45 h-auto" ref={arrowRef}/>
+          <img src="/down.png" alt="three down arrows" className="w-13 md:w-[10vw] lg:w-40 xl:w-45 max-h-28 md:max-h-40 lg:max-h-72 object-contain" ref={arrowRef}/>
           <span className="text-white font-['Bebas'] text-md sm:text-[3vw] lg:text-[4rem] tracking-[-0.3em]" style={{ writingMode: 'vertical-rl', textOrientation: 'upright'}} ref={scrollTextRef}>
             Scroll
           </span>
