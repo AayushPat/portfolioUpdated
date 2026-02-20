@@ -72,12 +72,12 @@ const Title = () => {
         
         {/* Role/Title */}
         <h2 ref={roleRef} className="role-title text-white font-['Poppins'] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mt-2 md:mt-4 will-change-transform">
-          Computer Science student thinking beyond standard patterns to build thoughtful software.
+          Early Systems Builder
         </h2>
         
         {/* Value Proposition */}
         <p ref={valuePropRef} className="value-proposition text-white font-['Poppins'] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-3 md:mt-4 max-w-full sm:max-w-2xl sm:ml-auto leading-relaxed will-change-transform">
-          Exploring AI systems, abstract problem-solving, and modern web development.
+         Interested in AI systems and systems-level problem solving
         </p>
       </div>
   );

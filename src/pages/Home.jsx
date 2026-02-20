@@ -123,13 +123,13 @@ export default function Home(){
         {/* Decorative floating letters - disabled on mobile for performance */}
         {width >= 768 && <ExtraFletters />}
         
-        {/* Scroll indicator arrow with responsive positioning */}
-        <img src="/down.png" alt=" three down arrows" className=" w-13 ml-[75vw] mt-80 md:w-[10vw] sm:ml-[84vw] sm:mt-[25vh] xl:w-45 h-auto lg:w-40 lg:ml-[83%] lg:mt-40" ref={arrowRef}/>
-        
-        {/* Vertical "Scroll" text indicator */}
-        <span className= "text-white font-['Bebas'] text-md left-[90vw] top-100 sm:text-sm sm:text-[3vw] sm:left-145 sm:top-35 lg:text-[4rem]  md:left-[95vw] md:top-[30vh] absolute lg:top-55 lg:left-357 tracking-[-0.3em]" style={{ writingMode: 'vertical-rl', textOrientation: 'upright'}} ref={scrollTextRef}>
-          Scroll
-        </span>
+        {/* Scroll indicator: arrow + "Scroll" text, aligned together */}
+        <div className="absolute flex items-center top-80 left-[75vw] sm:top-[25vh] sm:left-[84vw] lg:top-40 lg:left-[83%]">
+          <img src="/down.png" alt="three down arrows" className="w-13 md:w-[10vw] lg:w-40 xl:w-45 h-auto" ref={arrowRef}/>
+          <span className="text-white font-['Bebas'] text-md sm:text-[3vw] lg:text-[4rem] tracking-[-0.3em]" style={{ writingMode: 'vertical-rl', textOrientation: 'upright'}} ref={scrollTextRef}>
+            Scroll
+          </span>
+        </div>
       </div>
       
       {/* Quick Facts Section - Immediately after hero */}
