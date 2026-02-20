@@ -23,7 +23,7 @@ export default function About() {
       <div className='text-white'>
         {/* mt works for xs and lg*/}
         {/* title for about me page much larger than regular text*/}
-        <h1 className='text-3xl md:text-7xl md:ml-5 md:max-w-[70vw] md:text-left lg:text-9xl lg:mt-20 mt-10 ml-2 max-w-[65vw] lg:max-w-[70vw] lg:ml-10 relative font-[poppins] sm:text-right sm:ml-0 lg:pr-0  lg:text-left sm:pr-15 z-10'>
+        <h1 className='text-3xl md:text-7xl md:ml-5 md:max-w-[70vw] md:text-left lg:text-9xl lg:mt-14 mt-6 ml-2 max-w-[65vw] lg:max-w-[70vw] lg:ml-10 relative font-[poppins] sm:text-right sm:ml-0 lg:pr-0  lg:text-left sm:pr-15 z-10'>
         Hi, my name's Aayush Patel
         </h1>
         {/* couple links i thought i might as well add on*/}
@@ -58,16 +58,16 @@ export default function About() {
       
           {/* primary text*/}
 
-        <div className='text-[0.9rem] indent-15 lg:indent-30 md:indent-22 max-w-[70vw] sm:max-w-[55vw] md:max-w-[45vw] md:mt-[18%] md:ml-110 md:text-[1.1rem] sm:ml-80 lg:max-w-[50vw] lg:left-[25vw] ml-40 lg:text-2xl lg:mr-4 top-32 lg:top-25 absolute font-[poppins] z-10'>
+        <div className='text-[0.9rem] max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] md:mt-[18%] md:ml-5 md:text-[1.1rem] sm:ml-5 lg:max-w-[75vw] lg:left-[5vw] ml-3 lg:text-2xl lg:mr-4 top-44 lg:top-40 absolute font-[poppins] z-10'>
         <p>
-        ,I'm a computer science major at James Madison University with a minor in Economics,
+        I'm a computer science major at James Madison University with a minor in Economics,
         combining technical skills with a broader understanding of how technology influences our world.
         I'm especially drawn to the possibilities within artificial intelligence and motivated to keep 
         learning how it can be applied to solve real world problems. Outside of academics, I play soccer
         and tennis, where I enjoy the mental focus and strategic thinking they require. These sports have
         taught me the importance of discipline, patience, and staying sharp under pressure.
         </p>
-        <p className='indent-8'>
+        <p className='mt-4'>
             I grew up in Roanoke, Virginia, where I spent countless hours hiking in 
         the Blue Ridge Mountains. Exploring the outdoors taught me resilience and adaptability,
         which I now bring to every challenge I take on. Whether it's debugging a program or collaborating on a group project,
