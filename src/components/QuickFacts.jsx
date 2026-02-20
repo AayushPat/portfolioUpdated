@@ -248,7 +248,7 @@ export default function QuickFacts() {
                   Haynes Scholar
                 </p>
                 <p className="text-white/80 font-['Poppins'] text-sm sm:text-base md:text-lg">
-                  Research Excellence Award
+                  A selective STEM community at JMU focused on early research, cohort learning, and leadership development.
                 </p>
               </div>
             </div>
