@@ -59,9 +59,12 @@ export default function P5() {
 
       {/* Playable Embed */}
       <div className="px-6 lg:px-16 pb-20 flex flex-col items-center">
-        <h2 className="text-white text-2xl lg:text-4xl font-[poppins] mb-6 self-start">
+        <h2 className="text-white text-2xl lg:text-4xl font-[poppins] mb-2 self-start">
           Play It
         </h2>
+        <p className="text-white/50 font-[poppins] text-sm mb-6 self-start">
+          (AI narrator currently unavailable — ElevenLabs free tier ran out. Browser voice is used instead. Ik it sounds horrible and robotic sorry, working on getting it back up ASAP)
+        </p>
         <div className="w-full max-w-5xl rounded-xl overflow-hidden border-2 border-white shadow-2xl">
           <iframe
             ref={iframeRef}
@@ -72,7 +75,7 @@ export default function P5() {
           />
         </div>
         <p className="text-white/50 font-[poppins] text-sm mt-4">
-          Use W/A/S/D or arrow keys to move. Audio required — headphones recommended.
+          Use W/A/S/D or arrow keys to move. Audio required — headphones recommended. 
         </p>
       </div>
 
