@@ -26,6 +26,12 @@ const items = [
     title: 'Canvas To-Do List',
     description: 'Canvas API integration',
     brightness: 1.6
+  },
+  {
+    image: '/gameforB.png',
+    link: '/p5',
+    title: 'EchoPath (Blind-accessible audio game) ',
+    description: 'Blind-accessible audio game'
   }
 ];
 

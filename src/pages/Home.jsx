@@ -191,12 +191,23 @@ export default function Home(){
              recreate Grand Caverns as an exact digital model.
               We mapped the cave structure point by point, turning
                real survey data into a detailed 3D environment.
-                The final simulation shows bats flying through the space 
+                The final simulation shows bats flying through the space
                 just as they do in the real cave, giving an accurate
                  look at their movement and behavior underground.</p>
                  <img src="/cave.jpg" alt="3D visualization of Grand Caverns cave structure" className='w-full mb-10' />
           </Link>
-        </Card>  
+        </Card>
+        <Card>
+          <Link to="/p5">
+            <h3 className='font-[quick] text-4xl flex items-center justify-center bg-gradient-to-t from-blue-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] border-2'>
+            EchoPath</h3>
+            <p className='text-center pt-6 font-[Poppins]'>
+              An audio-first exploration game built around accessibility, allowing players to navigate,
+              discover checkpoints, and avoid danger using sound instead of visuals. Every mechanic is
+              driven by spatial audio — no sight required.</p>
+            <img src="/gameforB.png" alt="EchoPath gameplay screenshot showing the audio-based exploration map" className='w-full mt-[4vh] m-7' />
+          </Link>
+        </Card>
         </CardSwap>
       <div className='p-2 sm:max-w-[53vw] md:max-w-[45vw] md:h-40 lg:max-w-[50%] lg:h-50 lg:ml-10'>
       <TextPressure
