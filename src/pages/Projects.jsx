@@ -37,8 +37,16 @@ const items = [
 
 export default function Projects() {
   return (
-    <main id="main-content" className="bg-black w-full h-screen flex flex-col">
+    <main id="main-content" className="bg-black w-full h-screen flex flex-col relative">
       <NavBar textColor="text-white" />
+      <div className="absolute bottom-140 right-50 flex flex-col items-center pointer-events-none z-10">
+        <img
+          src="/construc.png"
+          alt="Construction sign"
+          className="w-70 opacity-80 mix-blend-mode-multiply"
+        />
+        <p className="text-white text-sm mt-2 opacity-80">This page is due for a glow-up — stay tuned.</p>
+      </div>
       <div className="flex-1 w-full min-h-0">
         <InfiniteMenu items={items} />
       </div>
