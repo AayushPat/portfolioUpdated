@@ -13,39 +13,6 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 - **3D Graphics**: Three.js integration for interactive visualizations
 - **Smooth Animations**: GSAP animations and scroll triggers
 
-##  Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd portfolioUpdated
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Set up environment variables (optional):
-```bash
-# Copy the example file
-cp .env.example .env
-
-# Edit .env and add your Web3Forms access key
-# Get your key from https://web3forms.com
-VITE_WEB3FORMS_ACCESS_KEY=your_access_key_here
-```
-
-4. Start the development server:
-```bash
-npm run dev
-```
-
-5. Build for production:
-```bash
-npm run build
-```
-
 ##  Tech Stack
 
 - **React 19** - UI library
@@ -129,4 +96,4 @@ This project is private and personal.
 
 ---
 
-Built with ❤️ using React and Vite
+Built using React and Vite
