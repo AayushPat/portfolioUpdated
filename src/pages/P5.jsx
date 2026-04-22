@@ -33,11 +33,11 @@ export default function P5() {
       {/* Header */}
       <div className="px-6 lg:px-16 pt-10 pb-8">
         <h1 className="text-white text-4xl lg:text-8xl font-[poppins] mb-8">
-          EchoPath
+          Wake Up
         </h1>
         <p className="text-white font-[poppins] text-base lg:text-lg leading-relaxed max-w-3xl">
           An audio-first exploration game built around accessibility, allowing players to navigate, discover checkpoints, and avoid danger using sound instead of visuals.
-          EchoPath was designed from the ground up for blind and visually impaired players — rather than retrofitting accessibility onto an existing visual experience,
+          Wake Up was designed from the ground up for blind and visually impaired players — rather than retrofitting accessibility onto an existing visual experience,
           every mechanic is driven by spatial audio. Players explore an open map to locate 10 hidden checkpoints using stereo panning and volume cues, where getting louder
           means getting closer. Narrated feedback guides progress, while certain audio signals warn of danger zones to avoid. Building this project deepened my understanding
           of the Web Audio API, inclusive design principles, and how thoughtful sound engineering can replace an entire visual layer.
@@ -51,7 +51,7 @@ export default function P5() {
           target="_blank"
           rel="noopener noreferrer"
           className="lg:text-4xl px-6 py-3 text-black bg-white rounded-lg hover:bg-gray-800 hover:text-white transition duration-300"
-          aria-label="View EchoPath on GitHub (opens in new tab)"
+          aria-label="View Wake Up on GitHub (opens in new tab)"
         >
           View on GitHub
         </a>
@@ -68,7 +68,7 @@ export default function P5() {
         <div className="w-full max-w-5xl rounded-xl overflow-hidden border-2 border-white shadow-2xl">
           <iframe
             ref={iframeRef}
-            title="EchoPath — blind-accessible audio game"
+            title="Wake Up — blind-accessible audio game"
             allow="autoplay; microphone"
             className="w-full"
             style={{ height: '600px', border: 'none' }}
@@ -85,7 +85,7 @@ export default function P5() {
           <h2 className="text-white text-2xl lg:text-4xl font-[poppins] mb-4">Gameplay</h2>
           <LazyImage
             src="/gameforB.png"
-            alt="EchoPath gameplay screenshot showing the audio-based exploration map"
+            alt="Wake Up gameplay screenshot showing the audio-based exploration map"
             className="w-full rounded-lg shadow-2xl"
           />
         </div>

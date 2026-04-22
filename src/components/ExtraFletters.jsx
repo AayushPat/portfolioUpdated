@@ -13,9 +13,9 @@ const ExtraFletters = () => {
 
 
     return (
-      <h1 ref={letterRef} className= "text-white font-['Bebas'] text-7xl md:text-[15vw] lg:text-[12rem] absolute top-[115vh] leading-none  tracking-widest text-right max-w-6xl">
-                {word.split("").map((letter, index) => (
-                <span key={index} className="inline-block">{letter}</span>
+      <h1 ref={letterRef} className="letters-3d text-white font-['Bebas'] text-7xl md:text-[15vw] lg:text-[12rem] absolute top-[115vh] leading-none tracking-widest text-right max-w-6xl" style={{ perspective: '800px' }}>
+        {word.split("").map((letter, index) => (
+          <span key={index} className="inline-block">{letter}</span>
         ))}
     
     </h1>

@@ -12,7 +12,7 @@
 }
 
 .page-enter {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.25s ease-out forwards;
 }
 
 @keyframes fadeOut {
@@ -89,6 +89,184 @@ body::-webkit-scrollbar-thumb:hover {
 body {
   background-color: #A0A0A0;
   overflow-x: hidden;
+}
+
+/* ── HERO 3D BACKGROUND ──────────────────────────────────── */
+
+/* Scrolling perspective grid */
+@keyframes grid-march {
+  from { background-position: 0 0; }
+  to   { background-position: 0 80px; }
+}
+
+.hero-bg {
+  background: linear-gradient(to bottom,
+    #020208 0%,
+    #050410 30%,
+    #090618 58%,
+    #110825 82%,
+    #180b30 100%
+  );
+}
+
+/* Synthwave sun glow pulse */
+@keyframes sun-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 25px  rgba(255, 75, 220, 0.65),
+      0 0 70px  rgba(200,  0, 255, 0.38),
+      0 0 140px rgba(140,  0, 220, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 0 45px  rgba(255, 75, 220, 0.95),
+      0 0 110px rgba(200,  0, 255, 0.55),
+      0 0 210px rgba(140,  0, 220, 0.30);
+  }
+}
+
+.hero-sun {
+  animation: sun-pulse 4s ease-in-out infinite;
+}
+
+/* Grid plane that recedes to the horizon */
+.perspective-grid {
+  position: absolute;
+  bottom: -5%;
+  left: -25%;
+  right: -25%;
+  height: 55%;
+  transform: perspective(300px) rotateX(70deg);
+  transform-origin: 50% 0%;
+  background-image:
+    linear-gradient(rgba(100, 20, 210, 0.28) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(100, 20, 210, 0.28) 1.5px, transparent 1.5px);
+  background-size: 80px 80px;
+  animation: grid-march 2.5s linear infinite;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 78%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glowing horizon line */
+.perspective-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: linear-gradient(to right,
+    transparent,
+    rgba(180, 50, 255, 0.9),
+    rgba(255, 80, 210, 0.7),
+    rgba(180, 50, 255, 0.9),
+    transparent
+  );
+  box-shadow:
+    0 0 8px  rgba(180, 50, 255, 0.8),
+    0 0 22px rgba(140, 20, 220, 0.5),
+    0 0 55px rgba(100,  0, 190, 0.3);
+}
+
+/* Radial glow bloom at vanishing point */
+.perspective-grid::after {
+  content: '';
+  position: absolute;
+  top: -18%;
+  left: 18%;
+  right: 18%;
+  height: 48%;
+  background: radial-gradient(ellipse at 50% 100%,
+    rgba(140, 20, 255, 0.16) 0%,
+    transparent 65%
+  );
+}
+
+/* ── 3D TEXT EFFECTS ─────────────────────────────────────── */
+
+/* Extruded block letters for floating ExtraFletters */
+.letters-3d {
+  text-shadow:
+    2px 2px 0 #330068,
+    4px 4px 0 #250048,
+    6px 6px 0 #170028,
+    7px 7px 12px rgba(0, 0, 0, 0.85);
+}
+
+/* Extruded block letters for main title — matches floating letters style */
+.title-3d {
+  text-shadow:
+    2px 2px 0 #330068,
+    4px 4px 0 #250048,
+    6px 6px 0 #170028,
+    7px 7px 12px rgba(0, 0, 0, 0.85);
+}
+
+/* Aurora background for About Me section */
+@keyframes aurora-float-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(2%, 5%) scale(1.06); }
+  66%       { transform: translate(-3%, -3%) scale(0.94); }
+}
+@keyframes aurora-float-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-4%, 3%) scale(1.08); }
+  70%       { transform: translate(3%, -4%) scale(0.96); }
+}
+@keyframes aurora-float-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(4%, -5%) scale(1.1); }
+}
+
+.aurora-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #05050f;
+}
+
+/* Left indigo blob */
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  top: 5%;
+  left: -8%;
+  background: radial-gradient(ellipse, rgba(75, 0, 130, 0.32), transparent 68%);
+  filter: blur(48px);
+  animation: aurora-float-a 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Right purple blob */
+.aurora-bg::after {
+  content: '';
+  position: absolute;
+  width: 48%;
+  height: 48%;
+  bottom: 8%;
+  right: -6%;
+  background: radial-gradient(ellipse, rgba(120, 40, 220, 0.22), transparent 68%);
+  filter: blur(52px);
+  animation: aurora-float-b 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Center blue-violet blob */
+.aurora-mid-blob {
+  position: absolute;
+  width: 38%;
+  height: 42%;
+  top: 45%;
+  left: 35%;
+  background: radial-gradient(ellipse, rgba(30, 15, 90, 0.28), transparent 70%);
+  filter: blur(44px);
+  animation: aurora-float-c 22s ease-in-out infinite 4s;
+  pointer-events: none;
+  will-change: transform;
 }
 
 

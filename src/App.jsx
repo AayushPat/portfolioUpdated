@@ -19,18 +19,18 @@ const P5 = lazy(() => import('./pages/P5'));
 
 // All images to preload during the splash screen
 const IMAGES_TO_PRELOAD = [
-  '/background.png',
-  '/AH.png',
+  // Hero — visible immediately on load
+  '/newbg.png',
+  '/about.jpg',
+  // UI
   '/down.png',
+  '/AH.png',
+  // Project images
+  '/gameforB.png',
   '/regularinUse.jpg',
-  '/desktopbefore.jpg',
-  '/desktopafrer.jpg',
-  '/confirm.jpg',
-  '/web.jpg',
   '/cave.jpg',
   '/google-calendar.jpg',
-  '/url.png',
-  '/gameforB.png',
+  '/web.jpg',
 ];
 
 function preloadImage(url) {
