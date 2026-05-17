@@ -39,10 +39,12 @@ export default function P6() {
           Y86-64 Interpreter
         </h1>
         <p className="text-white/70 font-['Poppins'] text-base lg:text-lg leading-relaxed max-w-3xl">
-          A command-line utility written in C that parses, disassembles, and executes Y86-64 Mini-ELF binaries.
-          Built as a multi part project for Computer Systems, each of its four parts maps directly to a stage of how a real
-          processor handles a program — from reading a binary off disk all the way through executing instructions one
-          cycle at a time. Together they form a full Von Neumann pipeline simulator with a built-in disassembler and trace debugger.
+        Building this project across four stages gave me a ground-up understanding 
+        of how a real processor works — from parsing binary formats and implementing a 
+        disassembler, to simulating instruction execution cycle by cycle. 
+        Each part forced me to think like the hardware: managing memory, 
+        decoding opcodes, and tracking register state by hand. It's the project 
+        that made computer systems click for me.
         </p>
       </div>
 
