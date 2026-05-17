@@ -16,6 +16,7 @@ const P2 = lazy(() => import('./pages/P2'));
 const P3 = lazy(() => import('./pages/P3'));
 const P4 = lazy(() => import('./pages/P4'));
 const P5 = lazy(() => import('./pages/P5'));
+const P6 = lazy(() => import('./pages/P6'));
 
 // All images to preload during the splash screen
 const IMAGES_TO_PRELOAD = [
@@ -117,6 +118,7 @@ export default function App() {
             <Route path="/p3" element={<P3 />} />
             <Route path="/p4" element={<P4 />} />
             <Route path="/p5" element={<P5 />} />
+            <Route path="/p6" element={<P6 />} />
           </Routes>
         </div>
       </Suspense>

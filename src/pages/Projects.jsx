@@ -9,6 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    title: 'Y86-64 Interpreter',
+    description:
+      'A command-line simulator written in C that parses, disassembles, and executes Y86-64 Mini-ELF binaries — implementing the full Von Neumann pipeline (fetch → decode → execute → memory → writeback) from scratch, including a built-in disassembler and single-step trace debugger.',
+    image: '/construc.png',
+    link: '/p6',
+  },
+  {
     title: 'Wake Up',
     description:
       'An audio-first exploration game built around accessibility. Players navigate checkpoints and avoid danger entirely through spatial sound — no visuals required.',
