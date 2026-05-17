@@ -12,7 +12,7 @@ const projects = [
     title: 'Y86-64 Interpreter',
     description:
       'A command-line simulator written in C that parses, disassembles, and executes Y86-64 Mini-ELF binaries — implementing the full Von Neumann pipeline (fetch → decode → execute → memory → writeback) from scratch, including a built-in disassembler and single-step trace debugger.',
-    image: '/construc.png',
+    image: '/y86ref.jpeg',
     link: '/p6',
   },
   {

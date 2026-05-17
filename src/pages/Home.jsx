@@ -310,6 +310,15 @@ export default function Home(){
             </Link>
           </Card>
           <Card>
+            <Link to="/p6">
+              <h3 className='font-[quick] text-4xl flex items-center justify-center bg-gradient-to-t from-gray-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] border-2'>
+              Y86-64 Interpreter</h3>
+              <p className='text-center pt-6 font-[Poppins]'>
+                A full Von Neumann pipeline simulator written in C — parses, disassembles, and executes Y86-64 Mini-ELF binaries with a built-in trace debugger. Built across four parts, each mapping to a real processor stage.</p>
+              <img src="/y86ref.jpeg" alt="Y86-64 interpreter reference diagram" className='w-full mt-[4vh] m-7' />
+            </Link>
+          </Card>
+          <Card>
             <Link to="p1">
               <h3 className='font-[quick] text-4xl pt-4 text-center mr-10 inset-0 bg-gradient-to-t from-yellow-200 to-transparent opacity-45 w-full h-[9vh] sm:h-[14vh] md:h-[7vw] md:text-3xl border-2'>
               Grand Caverns Sim</h3>
