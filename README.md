@@ -7,7 +7,6 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 - **Modern Tech Stack**: React 19, Vite 7, Tailwind CSS 4
 - **Performance Optimized**: Code splitting, lazy loading, optimized images
 - **Accessible**: ARIA labels, keyboard navigation, focus management
-- **SEO Friendly**: Comprehensive meta tags, Open Graph, Twitter cards
 - **Error Handling**: Error boundaries for graceful error handling
 - **Responsive Design**: Mobile-first approach with breakpoint-based scaling
 - **3D Graphics**: Three.js integration for interactive visualizations
